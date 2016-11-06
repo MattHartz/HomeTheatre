@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Rooms";
+}
+
+<!-- Reacted Chat Container  -->
+<div id="chatContainer"></div>
+
+<style>
+    .chatContainer {
+        height: 100%;
+    }
+
+    .chatWrapper {
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .chatRoomWrapper {
+        height: 100%;
+    }
+
+    .chatLog {
+        overflow-y: auto;
+        margin: 10px 0 10px 0;
+    }
+
+    .chat {
+        display: flex;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 39;
+    }
+
+    .usersBox {
+        height: 100%;
+        padding: 10px;
+    }
+
+    .messageWrapper {
+        width: 100%;
+    }
+
+    .videoPlayer {
+        flex-grow: 39;
+    }
+
+    .messageBox {
+        resize: none;
+        border-radius: 8px;
+        width: 90% !important;
+        max-width: none !important;
+        padding: 7px;
+        outline: none;
+    }
+
+    .roomTitle {
+        flex-grow: 1;
+        margin: 0 !important;
+    }
+</style>
+<script src="@Url.Content("~/Content/scripts/Player.jsx")"></script>
+<script src="@Url.Content("~/Content/scripts/Rooms.jsx")"></script>

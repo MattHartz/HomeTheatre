@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+@model HomeTheatre.Models.RoomViewModel
+@using (Html.BeginForm())
+{
+    <form style="margin-top:20px">
+        <div class="form-group">
+            <!--<label for="Name">Room Name</label>
+            <input type="text" class="form-control" id="Name" placeholder="Room Name">-->
+            @Html.LabelFor(x => x.Name)
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        </div>
+        <div class="checkbox">
+            <label>
+                <!--<input type="checkbox" id="IsPrivate"> Do you want this room private?-->
+                @Html.CheckBoxFor(x => x.IsPrivate)
+                @Html.LabelFor(x => x.IsPrivate)
+            </label>
+        </div>
+        <div class="form-group">
+            <!--<label for="Name">Room Name</label>
+            <input type="text" class="form-control" id="Name" placeholder="Room Name">-->
+            @Html.LabelFor(x => x.Source)
+            @Html.TextBoxFor(x => x.Source, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-default">Create</button>
+    </form>
+}
